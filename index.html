@@ -17,21 +17,86 @@
 </head>
 <body><!-- BODY -->
     <header><!-- HEADER -->
-        <nav class="header__nav"><!-- NAV -->
-            <ul class="header__lista">
-                <li class="header__li"><a href="#"> Inicio </a></li>
-                <li class="header__li"><a href="paginas/sobre-nosotros.html"> Sobre nosotros </a></li>
-                <li class="header__li"><a href="paginas/contactanos.html"> Contactanos </a></li>
-                <img class="header__logo" src="recursos/logo-snoop-1.png">
-                <li class="header__li"><a href="paginas/musica.html"> Discografia </a></li>
-                <li class="header__li"><a href="paginas/productos.html"> Productos </a></li>
-                <li class="header__li"><a href="paginas/peliculas.html"> Peliculas </a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                <img src="../29295/recursos/logo-snoop-1.png" alt="" width="140" height="35">
+                </a>
+            </div>
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="header__li navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="header__li nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../29295/paginas/sobre-nosotros.html">sobre nosotros</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../29295/paginas/contactanos.html">contactos</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../29295/paginas/musica.html">Musica</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../29295/paginas/productos.html">Productos</a>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
         </nav>
-    </header>
     <main><!-- MAIN -->
         <section class="main__principal"><!-- GALERIA -->
             <div class="main__boton--1"><button class="button">Escuchar</button></div>
+        </section>
+        <section>
+            <h2 class="main__titulo--2"> Peliculas </h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carrusel carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../29295/recursos/pelicula_1.jpg" class="carrusel__altura" alt="img pelicula 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="../29295/recursos/pelicula_2.jpg" class="carrusel__altura" alt="img pelicula 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="../29295/recursos/pelicula_3.jpg" class="carrusel__altura" alt="img pelicula 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="../29295/recursos/pelicula_4.jpg" class="carrusel__altura" alt="img pelicula 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="../29295/recursos/pelicula_5.jpg" class="carrusel__altura" alt="img pelicula 5">
+                </div>
+                <div class="carousel-item">
+                    <img src="../29295/recursos/pelicula_6.jpg" class="carrusel__altura" alt="img pelicula 6">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
         </section>
         <section>
             <iframe class="main__musica" style="border-radius:12px" src="https://open.spotify.com/embed/artist/7hJcb9fa4alzcOq3EaNPoG?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -44,11 +109,21 @@
             </ul>
         </section>
         <section class="footer__iconos">
-            <img class="footer__img" src="recursos/spotify.jpg">
-            <img class="footer__img" src="recursos/discrod.jpg">
-            <img class="footer__img" src="recursos/twitter.jpg">
-            <img class="footer__img" src="recursos/youtube.jpg">
-            <img class="footer__img" src="recursos/instagram.jpg">
+            <div>
+                <a href="https://www.youtube.com/channel/UC-OO324clObi3H-U0bP77dw" target="_blank" ><img class="footer__img" src="recursos/youtube.jpg" alt="boton youtube"></a>
+            </div>
+            <div>
+                <a href="https://www.instagram.com/snoopdogg/" target="_blank"><img class="footer__img" src="recursos/instagram.jpg" alt="boton instagram"></a>
+            </div>
+            <div>
+                <a href="https://open.spotify.com/artist/7hJcb9fa4alzcOq3EaNPoG" target="_blank"><img class="footer__img" src="recursos/spotify.jpg" alt="boton soptify"></a>
+            </div>
+            <div>
+                <a href="https://twitter.com/snoopdogg" target="_blank"><img class="footer__img" src="recursos/twitter.jpg" alt="boton twitter"></a>
+            </div>
+            <div>
+                <a href="https://discord.com/invite/snoopdogg" target="_blank"><img class="footer__img" src="recursos/discrod.jpg" alt="boton discord"></a>
+            </div>
         </section>
         <p class="footer__texto"> derechos reservados </p>
     </footer>

@@ -35,15 +35,8 @@ header{
     justify-content: end;
 }
 
-.header__li{
-    display: inline;
-    padding: 20px;
-}
-
 .header__li a{
     color: white;
-    text-decoration: none;
-    font-family: 'Roboto', cursive;
 }
 
 /* MAIN */
@@ -54,7 +47,7 @@ main{
     flex-direction: column;
 }
 
-button{
+button {
     color: white;
     background-color: rgb(20, 16, 224);
     border: rgb(20, 16, 224) solid 10px;
@@ -63,9 +56,9 @@ button{
     border:none;
 }
 
-button:hover{
-    transform: translate( 10px 10px);
-}
+button :hover{
+    transform: scale(1.25, 1.25);
+} 
 
 .main__principal{
     display: grid;
@@ -85,9 +78,15 @@ button:hover{
     align-items: flex-end;
 }
 
+
 .main__boton--1 button{
     width: 200px;
     height: 60px;
+}
+
+.main__boton--1 button:hover{
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s;
 }
 
 .main__titulo{
@@ -134,6 +133,8 @@ button:hover{
 .main__galeria{
     background-color: rgb(0, 0, 0);
     padding: 50px;
+    display: flex;
+    
 }
 
 .main__galeria--chica{
@@ -207,6 +208,11 @@ button:hover{
     margin: 16px;
 }
 
+.main__botones:hover{
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s;
+}
+
 /* FOOTER */
 
 footer{
@@ -250,12 +256,15 @@ footer{
     width: 70px;
 }
 
-
+.carrusel{
+    background-color: black;
+}
 
 .carrusel__altura{
     height: 500px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 

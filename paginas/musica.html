@@ -14,26 +14,94 @@
 </head>
 <body>
     <header class="header"><!-- HEADER -->
-        <nav class="header__nav"><!-- NAV -->
-            <ul class="header__lista">
-                <li class="header__li"><a href="../index.html"> Inicio </a></li>
-                <li class="header__li"><a href="sobre-nosotros.html"> Sobre nosotros </a></li>
-                <li class="header__li"><a href="contactanos.html"> Contactanos </a></li>
-                <img class="header__logo" src="../recursos/logo-snoop-1.png">
-                <li class="header__li"><a href="#"> Discografia </a></li>
-                <li class="header__li"><a href="productos.html"> Productos </a></li>
-                <li class="header__li"><a href="paginas/peliculas.html"> Peliculas </a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                <img src="../recursos/logo-snoop-1.png" alt="" width="140" height="35">
+                </a>
+            </div>
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="header__li navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="header__li nav-item">
+                    <a class="nav-link " aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../paginas/sobre-nosotros.html">sobre nosotros</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../paginas/contactanos.html">contactos</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="#">Musica</a>
+                </li>
+                <li class="header__li nav-item">
+                    <a class="nav-link" href="../paginas/productos.html">Productos</a>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
         </nav>
     </header>
     <main class="main">
         <h1 class="main__titulo">discos de snoop dogg</h1>
         <section class="main__galeria">
-            <img class="main__galeria--chica" src="../recursos/400x400cc.jpg">
-            <img class="main__galeria--chica" src="../recursos/discos-3.jpg">
-            <img class="main__galeria--chica" src="../recursos/psy_hangover-portada.jpg">
-            <img class="main__galeria--chica" src="../recursos/discos-snoop.jpg">
-            <img class="main__galeria--chica" src="../recursos/discos-4.jpg">
+            <div class="card" style="width: 18rem;">
+                <img src="../recursos/discos-3.jpg" class="card-img-top" alt="pelicula 1">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../recursos/discos-4.jpg" class="card-img-top" alt="pelicula 2">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../recursos/400x400cc.jpg" class="card-img-top" alt="pelicula 3">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../recursos/discos-snoop.jpg" class="card-img-top" alt="pelicula 4">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../recursos/Snoop-Dogg-discos-2.jpg" class="card-img-top" alt="pelicula 5">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="../recursos/psy_hangover-portada.jpg" class="card-img-top" alt="pelicula 6">
+                <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </section>
         <h2 class="main__titulo"> MUSICA </h2><!-- REPRODUCTOR DE MUSICA -->
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7hJcb9fa4alzcOq3EaNPoG?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
@@ -45,12 +113,22 @@
                 <li class="footer__li">info@snoopdogg.com</li>
             </ul>
             </section>
-            <section>
-                <img class="footer__img" src="../recursos/spotify.jpg">
-                <img class="footer__img" src="../recursos/discrod.jpg">
-                <img class="footer__img" src="../recursos/twitter.jpg">
-                <img class="footer__img" src="../recursos/youtube.jpg">
-                <img class="footer__img" src="../recursos/instagram.jpg">
+            <section class="footer__iconos">
+                <div>
+                    <a href="https://www.youtube.com/channel/UC-OO324clObi3H-U0bP77dw" target="_blank" ><img class="footer__img" src="../recursos/youtube.jpg" alt="boton youtube"></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/snoopdogg/" target="_blank"><img class="footer__img" src="../recursos/instagram.jpg" alt="boton instagram"></a>
+                </div>
+                <div>
+                    <a href="https://open.spotify.com/artist/7hJcb9fa4alzcOq3EaNPoG" target="_blank"><img class="footer__img" src="../recursos/spotify.jpg" alt="boton soptify"></a>
+                </div>
+                <div>
+                    <a href="https://twitter.com/snoopdogg" target="_blank"><img class="footer__img" src="../recursos/twitter.jpg" alt="boton twitter"></a>
+                </div>
+                <div>
+                    <a href="https://discord.com/invite/snoopdogg" target="_blank"><img class="footer__img" src="../recursos/discrod.jpg" alt="boton discord"></a>
+                </div>
             </section>
         <p class="footer__texto"> derechos reservados </p>
     </footer>
