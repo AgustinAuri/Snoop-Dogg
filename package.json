@@ -1,0 +1,23 @@
+{
+  "name": "29295",
+  "version": "1.0.0",
+  "description": "<h1>Snoop Dogg - proyecto coderhouse</h1>\r <p>esta es una pagina fan de snoop dogg </P>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgustinAuri/Snoop-Dogg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AgustinAuri/Snoop-Dogg/issues"
+  },
+  "homepage": "https://github.com/AgustinAuri/Snoop-Dogg#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
