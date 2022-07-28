@@ -1,2 +1,16 @@
-/* colores */
-$color-principal:rgb(0, 0, 0);
+/* COLORES */
+$color-principal :rgb(0, 0, 0);
+$color-secundario :rgb(20, 16, 224) ;
+
+/* LETRAS */
+$font-principal : 'Roboto', cursive;
+$font-titulos : 'Rock Salt', cursive;
+$font-color :rgb(255, 255, 255) ;
+
+/* TAMAÑOS */
+$tamano-iconos :70px;
+
+
+/* TAMANOS LETRAS */
+$contenido: 1rem;
+$titulos: $contenido *2;

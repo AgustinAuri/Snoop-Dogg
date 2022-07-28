@@ -1,0 +1,158 @@
+main{
+    background-color: $color-principal;
+    display: flex;
+    flex-direction: column;
+    .main{
+        &__principal{
+            display: grid;
+            height: 100vh;
+            background-image: url(../recursos/BODR-Hero-Image-1.jpg);
+            background-size: cover;
+            background-position: center;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        &__titulo{
+            text-align: center;
+            color: $font-color;
+            font-family: $font-titulos;
+            padding: 0px 16px;
+        }
+        &__titulo--2{
+            color: $font-color;
+            font-family: $font-titulos;
+            padding: 0px 16px;
+        }
+        
+        &__samp{
+            color: $font-color
+            ;
+            font-family: $font-principal;
+            padding: 0px 16px;
+            text-align: center;
+            display: block;
+        }
+        
+        &__texto{
+            background-color: $color-principal;
+            color: $font-color;
+            font-family: $font-principal;
+            padding: 0px 16px;
+        }
+        
+        &__texto--2{
+            background-color: $color-principal;
+            color: $font-color;
+            font-family: $font-principal;
+            padding: 20px 16px;
+        }
+        
+        &__imagen--principal{
+            padding: auto;
+            width: 100%;
+            height: 900px;
+        }
+        
+        &__galeria{
+            background-color: $color-principal;
+            padding: 50px;
+            display: flex;
+        }
+        
+        &__galeria--chica{
+            width: 300px;
+            height: 300px;
+        }
+        
+        
+        &__img--productos{
+            width: 300px;
+            height: 300px;
+            padding: 20px 20px;
+        }
+        
+        &__venta{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 15px;
+            row-gap: 30px;
+            margin: 15px;
+        }
+        
+        &__producto{
+            border: white solid 2px;
+            border-radius: 10px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__select{
+            margin: 16px;
+            display: flex;
+            width: 80px;
+            height: 20px;
+        }
+        
+        &__botones{
+            background-color: $color-secundario;
+            border: $color-secundario solid 10px;
+            border-radius: 15px;
+            color: white;
+            padding: 10px;
+            margin: 16px;
+            &:hover{
+                transform: scale(1.1, 1.1);
+                transition: all 0.3s;
+            }        
+        }
+    }
+}
+
+
+
+.producto__uno{
+    grid-template-columns: 1/2;
+    grid-template-rows: 1/2;
+}
+
+.producto__dos{
+    grid-template-columns: 2/3;
+    grid-template-rows: 1/2;
+}
+
+.producto__tres{
+    grid-template-columns: 3/4;
+    grid-template-rows: 1/2;
+}
+
+.producto__cuatro{
+    grid-template-columns: 1/2;
+    grid-template-rows: 2/3;
+}
+
+.producto__cinco{
+    grid-template-columns: 2/3;
+    grid-template-rows: 2/3;
+}
+
+.main__boton--1{
+    grid-column:  2/3;
+    grid-row: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+        &__boton--1 button{
+            width: 200px;
+            height: 60px;
+            &:hover{
+                transform: scale(1.1, 1.1);
+                transition: all 0.3s;
+            }
+        }
+}
+
+
+

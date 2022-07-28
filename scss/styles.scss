@@ -1,5 +1,7 @@
 @import"variables";
+@import"main";
 @import"footer";
+@import"operators"; 
 @import"nav";
 @import"mediaquieries";
 
@@ -15,102 +17,24 @@ body{
 
 /* MAIN */
 
-main{
-    background-color: $color-principal;
-    display: flex;
-    flex-direction: column;
-}
+
 
 button {
-    color: white;
-    background-color: rgb(20, 16, 224);
-    border: rgb(20, 16, 224) solid 10px;
+    color: rgb(255, 255, 255);
+    background-color: $color-principal;
+    border: $color-secundario solid 10px;
     border-radius: 15px;
-    font-family: 'Roboto', cursive;
+    font-family: $font-principal;
     border:none;
 }
 
-.main__principal{
-    display: grid;
-    height: 100vh;
-    background-image: url(../recursos/BODR-Hero-Image-1.jpg);
-    background-size: cover;
-    background-position: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
 
-.main__boton--1{
-    grid-column:  2/3;
-    grid-row: 2/2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-        &__boton--1 button{
-            width: 200px;
-            height: 60px;
-            &:hover{
-                transform: scale(1.1, 1.1);
-                transition: all 0.3s;
-            }
-        }
-}
-
-.main__titulo{
-    text-align: center;
-    color: bisque;
-    font-family: 'Rock Salt', cursive;
-    padding: 0px 16px;
-}
-
-.main__titulo--2{
-    color: bisque;
-    font-family: 'Rock Salt', cursive;
-    padding: 0px 16px;
-}
-
-.main__samp{
-    color: white;
-    font-family: 'Roboto', cursive;
-    padding: 0px 16px;
-    text-align: center;
-    display: block;
-}
-
-.main__texto{
-    background-color: rgb(0, 0, 0);
-    color: azure;
-    font-family: 'Roboto', cursive;
-    padding: 0px 16px;
-}
-
-.main__texto--2{
-    background-color:rgb(0, 0, 0) ;
-    color: white;
-    font-family: 'roboto', cursive;
-    padding: 20px 16px;
-}
 
 .letra__formulario{
-    color: white;
+    color: $font-color;
 }
 
-.main__imagen--principal{
-    padding: auto;
-    width: 100%;
-    height: 900px;
-}
 
-.main__galeria{
-    background-color: rgb(0, 0, 0);
-    padding: 50px;
-    display: flex;
-}
-
-.main__galeria--chica{
-    width: 300px;
-    height: 300px;
-}
 
 .main__discos{
     display: grid;
@@ -144,89 +68,17 @@ button {
 }
 
 .musica__tarjeta{
-    background-color: rgb(39, 39, 39);
+    background-color: $color-principal;
     margin: 20px;
 }
 
 .musica__tarjeta--letars{
-    color: white;
+    color: $font-color;
 }
-
-.main__img--productos{
-    width: 300px;
-    height: 300px;
-    padding: 20px 20px;
-}
-
-.main__venta{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    row-gap: 30px;
-    margin: 15px;
-}
-
-.main__producto{
-    border: white solid 2px;
-    border-radius: 10px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.producto__uno{
-    grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
-
-.producto__dos{
-    grid-template-columns: 2/3;
-    grid-template-rows: 1/2;
-}
-
-.producto__tres{
-    grid-template-columns: 3/4;
-    grid-template-rows: 1/2;
-}
-
-.producto__cuatro{
-    grid-template-columns: 1/2;
-    grid-template-rows: 2/3;
-}
-
-.producto__cinco{
-    grid-template-columns: 2/3;
-    grid-template-rows: 2/3;
-}
-
-.main__select{
-    margin: 16px;
-    display: flex;
-    width: 80px;
-    height: 20px;
-}
-
-.main__botones{
-    background-color: rgb(20, 16, 224);
-    border: rgb(20, 16, 224) solid 10px;
-    border-radius: 15px;
-    color: white;
-    padding: 10px;
-    margin: 16px;
-}
-
-.main__botones:hover{
-    transform: scale(1.1, 1.1);
-    transition: all 0.3s;
-}
-
 
 
 .carrusel{
-    background-color: black;
+    background-color: $color-principal;
 }
 
 .carrusel__altura{
