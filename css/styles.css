@@ -1,507 +1,373 @@
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
-    background-color: rgb(0, 0, 0);
-}
+/* colores */
+/* FOOTER */
+footer {
+  padding: 24px;
+  display: grid;
+  grid-template-areas: "derechos iconos";
+  background-color: black; }
+  footer .footer__derechos {
+    grid-area: derechos; }
+  footer .footer__iconos {
+    grid-area: iconos;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end; }
+  footer .footer__titulo {
+    color: white;
+    font-family: 'Roboto', cursive; }
+  footer .footer__texto {
+    color: aliceblue;
+    font-family: 'Roboto', cursive;
+    /* padding: 0px 16px; */ }
+  footer .footer__li {
+    padding: 20px;
+    font-family: 'Roboto', cursive;
+    color: white; }
+  footer .footer__img {
+    padding: 20px;
+    width: 70px; }
 
 /* HEADER */
+.header__li a {
+  color: white; }
 
-.header__li a{
-    color: white;
-}
-
-/* MAIN */
-
-main{
-    background-color: rgb(0, 0, 0);
+/* MEDIA QUERIE DE TABLET */
+@media (min-width: 576px) and (max-width: 992px) {
+  header {
+    height: auto; }
+  .header__nav {
+    flex-grow: 0; }
+  .header__lista {
+    flex-direction: row;
+    flex-wrap: wrap; }
+  .main__venta {
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 15px; }
+  .producto__uno {
+    grid-template-columns: 1/2;
+    grid-template-rows: 1/2;
+    margin: 10px; }
+  .producto__dos {
+    grid-template-columns: 2/3;
+    grid-template-rows: 1/2;
+    margin: 10px; }
+  .producto__tres {
+    grid-template-columns: 1/2;
+    grid-template-rows: 2/3;
+    margin: 10px; }
+  .producto__cuatro {
+    grid-template-columns: 2/3;
+    grid-template-rows: 2/3;
+    margin: 10px; }
+  .producto__cinco {
+    grid-template-columns: 1/2;
+    grid-template-rows: 3/4;
+    margin: 10px; }
+  .main__principal {
+    background-size: cover;
+    background-position: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto; }
+  .main__boton--1 {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+  .main__boton--1 button {
+    width: 200px;
+    height: 60px; }
+  .main__discos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+  .musica__uno {
+    grid-template-columns: 1/2;
+    grid-template-rows: 1/2; }
+  .musica__dos {
+    grid-template-columns: 2/3;
+    grid-template-rows: 1/2; }
+  .musica__tres {
+    grid-template-columns: 1/2;
+    grid-template-rows: 2/3; }
+  .musica__cinco {
+    grid-template-columns: 2/3;
+    grid-template-rows: 2/3; }
+  .musica__seis {
+    grid-template-columns: 1/2;
+    grid-template-rows: 3/4; }
+  .footer__iconos {
+    grid-area: iconos;
     display: flex;
     flex-direction: column;
-}
+    justify-content: end;
+    align-items: flex-start; } }
 
-button {
-    color: white;
-    background-color: rgb(20, 16, 224);
-    border: rgb(20, 16, 224) solid 10px;
-    border-radius: 15px;
-    font-family: 'Roboto', cursive;
-    border:none;
-}
-
-.main__principal{
+/* MEDIA QUERIE DE CELULAR */
+@media (min-width: 320px) and (max-width: 575px) {
+  header {
+    height: auto; }
+  .header__nav {
+    flex-direction: column; }
+  .header__lista {
+    flex-direction: column; }
+  .main__venta {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 15px; }
+  .producto__uno {
+    grid-template-columns: 1/2;
+    grid-template-rows: 1/2;
+    margin: 10px; }
+  .producto__dos {
+    grid-template-columns: 1/2;
+    grid-template-rows: 2/3;
+    margin: 10px; }
+  .producto__tres {
+    grid-template-columns: 1/2;
+    grid-template-rows: 3/4;
+    margin: 10px; }
+  .producto__cuatro {
+    grid-template-columns: 1/2;
+    grid-template-rows: 4/5;
+    margin: 10px; }
+  .producto__cinco {
+    grid-template-columns: 1/2;
+    grid-template-rows: 5/6;
+    margin: 10px; }
+  .main__principal {
     display: grid;
     height: 100vh;
     background-image: url(../recursos/BODR-Hero-Image-1.jpg);
     background-size: cover;
     background-position: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.main__boton--1{
-    grid-column:  2/3;
-    grid-row: 2/2;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; }
+  .main__boton--1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-}
-
-
-.main__boton--1 button{
+    align-items: flex-end; }
+  .main__boton--1 button {
     width: 200px;
-    height: 60px;
-}
-
-.main__boton--1 button:hover{
-    transform: scale(1.1, 1.1);
-    transition: all 0.3s;
-}
-
-.main__titulo{
-    text-align: center;
-    color: bisque;
-    font-family: 'Rock Salt', cursive;
-    padding: 0px 16px;
-}
-
-.main__titulo--2{
-    color: bisque;
-    font-family: 'Rock Salt', cursive;
-    padding: 0px 16px;
-}
-
-.main__samp{
-    color: white;
-    font-family: 'Roboto', cursive;
-    padding: 0px 16px;
-    text-align: center;
-    display: block;
-}
-
-.main__texto{
-    background-color: rgb(0, 0, 0);
-    color: azure;
-    font-family: 'Roboto', cursive;
-    padding: 0px 16px;
-}
-
-.main__texto--2{
-    background-color:rgb(0, 0, 0) ;
-    color: white;
-    font-family: 'roboto', cursive;
-    padding: 20px 16px;
-}
-
-.letra__formulario{
-    color: white;
-}
-
-.main__imagen--principal{
-    padding: auto;
-    width: 100%;
-    height: 900px;
-}
-
-.main__galeria{
-    background-color: rgb(0, 0, 0);
-    padding: 50px;
-    display: flex;
-}
-
-.main__galeria--chica{
-    width: 300px;
-    height: 300px;
-}
-
-.main__discos{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.musica__uno{
+    height: 60px; }
+  .main__discos {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 15px; }
+  .musica__uno {
     grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
-
-.musica__dos{
-    grid-template-columns: 2/3;
-    grid-template-rows: 1/2;
-}
-
-.musica__tres{
-    grid-template-columns: 3/4;
-    grid-template-rows: 1/2;
-}
-
-.musica__cinco{
+    grid-template-rows: 1/2; }
+  .musica__dos {
     grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
-
-.musica__seis{
-    grid-template-columns: 2/3;
-    grid-template-rows: 2/3;
-}
-
-.musica__tarjeta{
-    background-color: rgb(39, 39, 39);
-    margin: 20px;
-}
-
-.musica__tarjeta--letars{
-    color: white;
-}
-
-.main__img--productos{
-    width: 300px;
-    height: 300px;
-    padding: 20px 20px;
-}
-
-.main__venta{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-    row-gap: 30px;
-    margin: 15px;
-}
-
-.main__producto{
-    border: white solid 2px;
-    border-radius: 10px;
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.producto__uno{
+    grid-template-rows: 2/3; }
+  .musica__tres {
     grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
-
-.producto__dos{
-    grid-template-columns: 2/3;
-    grid-template-rows: 1/2;
-}
-
-.producto__tres{
-    grid-template-columns: 3/4;
-    grid-template-rows: 1/2;
-}
-
-.producto__cuatro{
+    grid-template-rows: 3/4; }
+  .musica__cinco {
     grid-template-columns: 1/2;
-    grid-template-rows: 2/3;
-}
-
-.producto__cinco{
-    grid-template-columns: 2/3;
-    grid-template-rows: 2/3;
-}
-
-.main__select{
-    margin: 16px;
-    display: flex;
-    width: 80px;
-    height: 20px;
-}
-
-.main__botones{
-    background-color: rgb(20, 16, 224);
-    border: rgb(20, 16, 224) solid 10px;
-    border-radius: 15px;
-    color: white;
-    padding: 10px;
-    margin: 16px;
-}
-
-.main__botones:hover{
-    transform: scale(1.1, 1.1);
-    transition: all 0.3s;
-}
-
-/* FOOTER */
-
-footer{
-    padding: 24px ;
-    display: grid;
-    grid-template-areas: "derechos iconos";
-    background-color: rgb(0, 0, 0);
-}
-
-.footer__derechos{
-    grid-area: derechos;
-}
-
-.footer__iconos{
+    grid-template-rows: 4/5; }
+  .musica__seis {
+    grid-template-columns: 1/2;
+    grid-template-rows: 5/6; }
+  .footer__iconos {
     grid-area: iconos;
     display: flex;
-    justify-content: end;
-    align-items: flex-end;
-}
+    flex-direction: column;
+    align-items: flex-start; } }
 
-.footer__titulo{
-    color: white;
-    font-family: 'Roboto', cursive;
-}
+* {
+  margin: 0px;
+  padding: 0px; }
 
-.footer__texto{
-    color: aliceblue;
-    font-family: 'Roboto', cursive;
-    /* padding: 0px 16px; */
-}
+body {
+  background-color: black; }
 
-.footer__li{
-    padding: 20px;
-    font-family: 'Roboto', cursive;
-    color: white;
-}
+/* MAIN */
+main {
+  background-color: black;
+  display: flex;
+  flex-direction: column; }
 
-.footer__img{
-    padding: 20px;
-    width: 70px;
-}
+button {
+  color: white;
+  background-color: #1410e0;
+  border: #1410e0 solid 10px;
+  border-radius: 15px;
+  font-family: 'Roboto', cursive;
+  border: none; }
 
-.carrusel{
-    background-color: black;
-}
+.main__principal {
+  display: grid;
+  height: 100vh;
+  background-image: url(../recursos/BODR-Hero-Image-1.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
 
-.carrusel__altura{
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.main__boton--1 {
+  grid-column: 2/3;
+  grid-row: 2/2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+  .main__boton--1__boton--1 button {
+    width: 200px;
+    height: 60px; }
+    .main__boton--1__boton--1 button:hover {
+      transform: scale(1.1, 1.1);
+      transition: all 0.3s; }
 
-/* MEDIA QUERIE DE TABLET */
-@media (min-width: 576px) and (max-width: 992px) {
-    header {
-        height: auto;
-    }
+.main__titulo {
+  text-align: center;
+  color: bisque;
+  font-family: 'Rock Salt', cursive;
+  padding: 0px 16px; }
 
-    .header__nav{
-        flex-grow: 0;
-    }
+.main__titulo--2 {
+  color: bisque;
+  font-family: 'Rock Salt', cursive;
+  padding: 0px 16px; }
 
-    .header__lista{
-    flex-direction: row;
-    flex-wrap: wrap;
-    }
+.main__samp {
+  color: white;
+  font-family: 'Roboto', cursive;
+  padding: 0px 16px;
+  text-align: center;
+  display: block; }
 
-    .main__venta{
-        height: auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        row-gap: 15px;
-    }
+.main__texto {
+  background-color: black;
+  color: azure;
+  font-family: 'Roboto', cursive;
+  padding: 0px 16px; }
 
-    .producto__uno{
-        grid-template-columns: 1/2;
-        grid-template-rows: 1/2;
-        margin: 10px;
-    }
-    
-    .producto__dos{
-        grid-template-columns: 2/3;
-        grid-template-rows: 1/2;
-        margin: 10px
-    }
-    
-    .producto__tres{
-        grid-template-columns: 1/2;
-        grid-template-rows: 2/3;
-        margin: 10px
-    }
-    
-    .producto__cuatro{
-        grid-template-columns: 2/3;
-        grid-template-rows: 2/3;
-        margin: 10px
-    }
-    
-    .producto__cinco{
-        grid-template-columns: 1/2;
-        grid-template-rows: 3/4;
-        margin: 10px
-    }
+.main__texto--2 {
+  background-color: black;
+  color: white;
+  font-family: 'roboto', cursive;
+  padding: 20px 16px; }
 
-    .main__principal{
-        background-size: cover;
-        background-position: center;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .main__boton--1{
-        grid-column:  2/3;
-        grid-row: 2/2;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    
-    .main__boton--1 button{
-        width: 200px;
-        height: 60px;
-    }
+.letra__formulario {
+  color: white; }
 
-    .main__discos{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    
-    .musica__uno{
-        grid-template-columns: 1/2;
-        grid-template-rows: 1/2;
-    }
+.main__imagen--principal {
+  padding: auto;
+  width: 100%;
+  height: 900px; }
 
-    .musica__dos{
-        grid-template-columns: 2/3;
-        grid-template-rows: 1/2;
-}
+.main__galeria {
+  background-color: black;
+  padding: 50px;
+  display: flex; }
 
-    .musica__tres{
-        grid-template-columns: 1/2;
-        grid-template-rows: 2/3;
-    }
+.main__galeria--chica {
+  width: 300px;
+  height: 300px; }
 
-    .musica__cinco{
-        grid-template-columns: 2/3;
-        grid-template-rows: 2/3;
-    }
+.main__discos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
 
-    .musica__seis{
-        grid-template-columns: 1/2;
-        grid-template-rows: 3/4;
-    }
+.musica__uno {
+  grid-template-columns: 1/2;
+  grid-template-rows: 1/2; }
 
-    .footer__iconos{
-        grid-area: iconos ;
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: flex-start;
-    }
-}
+.musica__dos {
+  grid-template-columns: 2/3;
+  grid-template-rows: 1/2; }
 
-/* MEDIA QUERIE DE CELULAR */
-@media (min-width: 320px) and (max-width: 575px) {
-    header {
-        height: auto;
-    }
+.musica__tres {
+  grid-template-columns: 3/4;
+  grid-template-rows: 1/2; }
 
-    .header__nav{
-        flex-direction: column;
-    }
+.musica__cinco {
+  grid-template-columns: 1/2;
+  grid-template-rows: 1/2; }
 
-    .header__lista{
-        flex-direction: column;
-    }
+.musica__seis {
+  grid-template-columns: 2/3;
+  grid-template-rows: 2/3; }
 
-    .main__venta{
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        row-gap: 15px;
-    }
+.musica__tarjeta {
+  background-color: #272727;
+  margin: 20px; }
 
-    .producto__uno{
-        grid-template-columns: 1/2;
-        grid-template-rows: 1/2;
-        margin: 10px;
-        
-    }
-    
-    .producto__dos{
-        grid-template-columns: 1/2;
-        grid-template-rows: 2/3;
-        margin: 10px
-    }
-    
-    .producto__tres{
-        grid-template-columns: 1/2;
-        grid-template-rows: 3/4;
-        margin: 10px
-    }
-    
-    .producto__cuatro{
-        grid-template-columns: 1/2;
-        grid-template-rows: 4/5;
-        margin: 10px
-    }
-    
-    .producto__cinco{
-        grid-template-columns: 1/2;
-        grid-template-rows: 5/6;
-        margin: 10px
-    }
+.musica__tarjeta--letars {
+  color: white; }
 
-    .main__principal{
-        display: grid;
-        height: 100vh;
-        background-image: url(../recursos/BODR-Hero-Image-1.jpg);
-        background-size: cover;
-        background-position: center;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .main__boton--1{
-        grid-column:  1/2;
-        grid-row: 2/3;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    
-    .main__boton--1 button{
-        width: 200px;
-        height: 60px;
-    }
+.main__img--productos {
+  width: 300px;
+  height: 300px;
+  padding: 20px 20px; }
 
-    .main__discos{
-        height: auto;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        row-gap: 15px;
-    }
-    
-    .musica__uno{
-        grid-template-columns: 1/2;
-        grid-template-rows: 1/2;
-    }
+.main__venta {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  row-gap: 30px;
+  margin: 15px; }
 
-    .musica__dos{
-        grid-template-columns: 1/2;
-        grid-template-rows: 2/3;
-}
+.main__producto {
+  border: white solid 2px;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
-    .musica__tres{
-        grid-template-columns: 1/2;
-        grid-template-rows: 3/4;
-    }
+.producto__uno {
+  grid-template-columns: 1/2;
+  grid-template-rows: 1/2; }
 
-    .musica__cinco{
-        grid-template-columns: 1/2;
-        grid-template-rows: 4/5;
-    }
+.producto__dos {
+  grid-template-columns: 2/3;
+  grid-template-rows: 1/2; }
 
-    .musica__seis{
-        grid-template-columns: 1/2;
-        grid-template-rows: 5/6;
-    }
+.producto__tres {
+  grid-template-columns: 3/4;
+  grid-template-rows: 1/2; }
 
-    .footer__iconos{
-        grid-area: iconos;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
+.producto__cuatro {
+  grid-template-columns: 1/2;
+  grid-template-rows: 2/3; }
+
+.producto__cinco {
+  grid-template-columns: 2/3;
+  grid-template-rows: 2/3; }
+
+.main__select {
+  margin: 16px;
+  display: flex;
+  width: 80px;
+  height: 20px; }
+
+.main__botones {
+  background-color: #1410e0;
+  border: #1410e0 solid 10px;
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  margin: 16px; }
+
+.main__botones:hover {
+  transform: scale(1.1, 1.1);
+  transition: all 0.3s; }
+
+.carrusel {
+  background-color: black; }
+
+.carrusel__altura {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
