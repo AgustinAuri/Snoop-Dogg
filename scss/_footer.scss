@@ -18,20 +18,19 @@ footer{
         }
         
         &__titulo{
-            color: white;
-            font-family: 'Roboto', cursive;
+            color: $font-color;
+            font-family: $font-principal;
         }
         
         &__texto{
-            color: aliceblue;
-            font-family: 'Roboto', cursive;
-            /* padding: 0px 16px; */
+            color: $font-color;
+            font-family: $font-principal;
         }
         
         &__li{
             padding: 20px;
-            font-family: 'Roboto', cursive;
-            color: white;
+            font-family: $font-principal;
+            color: $font-color;
         }
         
         &__img{

@@ -1,9 +1,10 @@
 @import"variables";
+@import"operators";
+@import"mediaquieries"; 
 @import"main";
 @import"footer";
-@import"operators"; 
 @import"nav";
-@import"mediaquieries";
+
 
 *{
     margin: 0px;
@@ -14,61 +15,43 @@ body{
     background-color: $color-principal;
 }
 
-
-/* MAIN */
-
-
-
-button {
-    color: rgb(255, 255, 255);
-    background-color: $color-principal;
-    border: $color-secundario solid 10px;
-    border-radius: 15px;
-    font-family: $font-principal;
-    border:none;
-}
-
-
-
 .letra__formulario{
     color: $font-color;
 }
-
-
 
 .main__discos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    .musica__uno{
+        grid-template-columns: 1/2;
+        grid-template-rows: 1/2;
+    }
+    
+    .musica__dos{
+        grid-template-columns: 2/3;
+        grid-template-rows: 1/2;
+    }
+    
+    .musica__tres{
+        grid-template-columns: 3/4;
+        grid-template-rows: 1/2;
+    }
+    
+    .musica__cinco{
+        grid-template-columns: 1/2;
+        grid-template-rows: 1/2;
+    }
+    
+    .musica__seis{
+        grid-template-columns: 2/3;
+        grid-template-rows: 2/3;
+    }
 }
 
-.musica__uno{
-    grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
 
-.musica__dos{
-    grid-template-columns: 2/3;
-    grid-template-rows: 1/2;
-}
-
-.musica__tres{
-    grid-template-columns: 3/4;
-    grid-template-rows: 1/2;
-}
-
-.musica__cinco{
-    grid-template-columns: 1/2;
-    grid-template-rows: 1/2;
-}
-
-.musica__seis{
-    grid-template-columns: 2/3;
-    grid-template-rows: 2/3;
-}
 
 .musica__tarjeta{
-    background-color: $color-principal;
     margin: 20px;
 }
 

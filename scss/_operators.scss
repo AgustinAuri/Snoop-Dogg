@@ -1,6 +1,13 @@
-/* CONDICIONALES IF */
+.padding-texto {
+    padding: 0px 16px;
+}
 
-$imagen-principal:(
-    
+.boton-animacion {
+    transform: scale(1.1, 1.1);
+    transition: all 0.3s;
+}
 
-);
+.img-formato{
+    width: 300px;
+    height: 300px;
+}
