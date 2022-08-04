@@ -179,24 +179,25 @@ main {
   main .main__titulo {
     text-align: center;
     color: white;
-    font-family: "Rock Salt", cursive; }
+    font-family: "M PLUS Rounded 1c", 800; }
   main .main__titulo--2 {
     text-align: center;
+    text-decoration: underline;
     color: white;
-    font-family: "Rock Salt", cursive; }
+    font-family: "M PLUS Rounded 1c", 800; }
   main .main__samp {
     color: white;
-    font-family: "Roboto", cursive;
+    font-family: "M PLUS Rounded 1c", 300;
     text-align: center;
     display: block; }
   main .main__texto {
     background-color: black;
     color: white;
-    font-family: "Roboto", cursive; }
+    font-family: "M PLUS Rounded 1c", 300; }
   main .main__texto--2 {
     background-color: black;
     color: white;
-    font-family: "Roboto", cursive;
+    font-family: "M PLUS Rounded 1c", 300;
     padding: 20px 16px; }
   main .main__imagen--principal {
     padding: auto;
@@ -229,7 +230,7 @@ button {
   background-color: #1410e0;
   border: #1410e0 solid 10px;
   border-radius: 15px;
-  font-family: "Roboto", cursive;
+  font-family: "M PLUS Rounded 1c", 300;
   border: none; }
 
 .main__boton--1 {
@@ -290,13 +291,13 @@ footer {
     align-items: flex-end; }
   footer .footer__titulo {
     color: white;
-    font-family: "Roboto", cursive; }
+    font-family: "M PLUS Rounded 1c", 300; }
   footer .footer__texto {
     color: white;
-    font-family: "Roboto", cursive; }
+    font-family: "M PLUS Rounded 1c", 300; }
   footer .footer__li {
     padding: 20px;
-    font-family: "Roboto", cursive;
+    font-family: "M PLUS Rounded 1c", 300;
     color: white; }
   footer .footer__img {
     padding: 20px;

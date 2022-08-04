@@ -21,6 +21,7 @@ main{
 
         &__titulo--2{
             text-align: center;
+            text-decoration: underline;
             color: $font-color;
             font-family: $font-titulos;
             @extend .padding-texto;
