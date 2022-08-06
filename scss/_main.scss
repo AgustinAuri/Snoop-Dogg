@@ -5,7 +5,7 @@ main{
     .main{
         &__principal{
             display: grid;
-            height: 100vh;
+            height: 50vw;
             background-image: url(../recursos/BODR-Hero-Image-1.jpg);
             background-size: cover;
             background-position: center;
@@ -136,5 +136,27 @@ button {
     }
 
     .producto__tarjeta{
-        margin: 20px;
+        margin: $margin;
+    }
+
+    .videos{
+        display: grid;
+        gap: 1rem;
+        grid-auto-rows: 25rem;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+
+    .video__1{
+        margin: $margin;
+    }
+
+    .redes{
+        margin: $margin;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .redes__sociales{
+        margin: $margin;
     }

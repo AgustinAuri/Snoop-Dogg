@@ -17,6 +17,7 @@
     .main__principal{
         background-size: cover;
         background-position: center;
+        background-image: url(../recursos/portada-celu.jpeg);
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
@@ -34,6 +35,12 @@
         height: 60px;
     }
 
+    .redes{
+        margin: $margin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     .footer__iconos{
         grid-area: iconos ;
@@ -62,7 +69,7 @@
     .main__principal{
         display: grid;
         height: 100vh;
-        background-image: url(../recursos/BODR-Hero-Image-1.jpg);
+        background-image: url(../recursos/portada-celu.jpeg);
         background-size: cover;
         background-position: center;
         grid-template-columns: 1fr;
@@ -80,6 +87,13 @@
     .main__boton--1 button{
         width: 200px;
         height: 60px;
+    }
+
+    .redes{
+        margin: $margin;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     footer{

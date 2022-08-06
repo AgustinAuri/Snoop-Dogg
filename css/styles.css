@@ -24,7 +24,7 @@ main {
   flex-direction: column; }
   main .main__principal {
     display: grid;
-    height: 100vh;
+    height: 50vw;
     background-image: url(../recursos/BODR-Hero-Image-1.jpg);
     background-size: cover;
     background-position: center;
@@ -116,6 +116,24 @@ button {
 .producto__tarjeta {
   margin: 20px; }
 
+.videos {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 25rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
+
+.video__1 {
+  margin: 20px; }
+
+.redes {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.redes__sociales {
+  margin: 20px; }
+
 /* FOOTER */
 footer {
   padding: 24px;
@@ -144,7 +162,8 @@ footer {
   footer .footer__li--2 {
     padding: 10px;
     font-family: "M PLUS Rounded 1c", 300;
-    color: white; }
+    color: white;
+    list-style: none; }
   footer .footer__img {
     padding: 20px;
     width: 70px; }
@@ -161,6 +180,7 @@ footer {
   .main__principal {
     background-size: cover;
     background-position: center;
+    background-image: url(../recursos/portada-celu.jpeg);
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto; }
   .main__boton--1 {
@@ -172,6 +192,11 @@ footer {
   .main__boton--1 button {
     width: 200px;
     height: 60px; }
+  .redes {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .footer__iconos {
     grid-area: iconos;
     display: flex;
@@ -190,7 +215,7 @@ footer {
   .main__principal {
     display: grid;
     height: 100vh;
-    background-image: url(../recursos/BODR-Hero-Image-1.jpg);
+    background-image: url(../recursos/portada-celu.jpeg);
     background-size: cover;
     background-position: center;
     grid-template-columns: 1fr;
@@ -204,6 +229,11 @@ footer {
   .main__boton--1 button {
     width: 200px;
     height: 60px; }
+  .redes {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   footer {
     padding: 24px;
     display: flex;
