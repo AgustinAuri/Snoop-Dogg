@@ -1,9 +1,9 @@
 @import"variables";
 @import"operators";
-@import"mediaquieries"; 
+@import"nav";
 @import"main";
 @import"footer";
-@import"nav";
+@import"mediaquieries"; 
 
 
 *{
@@ -21,35 +21,10 @@ body{
 
 .main__discos{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    .musica__uno{
-        grid-template-columns: 1/2;
-        grid-template-rows: 1/2;
-    }
-    
-    .musica__dos{
-        grid-template-columns: 2/3;
-        grid-template-rows: 1/2;
-    }
-    
-    .musica__tres{
-        grid-template-columns: 3/4;
-        grid-template-rows: 1/2;
-    }
-    
-    .musica__cinco{
-        grid-template-columns: 1/2;
-        grid-template-rows: 1/2;
-    }
-    
-    .musica__seis{
-        grid-template-columns: 2/3;
-        grid-template-rows: 2/3;
-    }
+    gap: 1rem;
+    grid-auto-rows: 30rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
-
-
 
 .musica__tarjeta{
     margin: 20px;
@@ -57,6 +32,7 @@ body{
 
 .musica__tarjeta--letars{
     color: $font-color;
+    font-family: $font-principal;
 }
 
 
@@ -67,7 +43,5 @@ body{
 .carrusel__altura{
     height: 500px;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 

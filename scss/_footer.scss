@@ -3,7 +3,7 @@
 footer{
     padding: 24px ;
     display: grid;
-    grid-template-areas: "derechos iconos";
+    grid-template-areas: "derechos nav iconos";
     background-color: rgb(0, 0, 0);
     .footer{
         &__derechos{
@@ -15,6 +15,10 @@ footer{
             display: flex;
             justify-content: end;
             align-items: flex-end;
+        }
+
+        &__nav{
+            grid-area: nav;
         }
         
         &__titulo{
@@ -29,6 +33,12 @@ footer{
         
         &__li{
             padding: 20px;
+            font-family: $font-principal;
+            color: $font-color;
+        }
+
+        &__li--2{
+            padding: 10px;
             font-family: $font-principal;
             color: $font-color;
         }

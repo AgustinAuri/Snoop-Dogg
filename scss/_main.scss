@@ -82,7 +82,7 @@ main{
             background-color: $color-secundario;
             border: $color-secundario solid 10px;
             border-radius: 15px;
-            color: white;
+            color: $font-color;
             padding: 10px;
             margin: 16px;
             &:hover{
@@ -130,33 +130,11 @@ button {
 
     .main__venta{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 15px;
-        row-gap: 30px;
-        margin: 15px;
-            .producto__uno{
-                grid-template-columns: 1/2;
-                grid-template-rows: 1/2;
-            }
-            
-            .producto__dos{
-                grid-template-columns: 2/3;
-                grid-template-rows: 1/2;
-            }
-            
-            .producto__tres{
-                grid-template-columns: 3/4;
-                grid-template-rows: 1/2;
-            }
-            
-            .producto__cuatro{
-                grid-template-columns: 1/2;
-                grid-template-rows: 2/3;
-            }
-            
-            .producto__cinco{
-                grid-template-columns: 2/3;
-                grid-template-rows: 2/3;
-            }
+        gap: 1rem;
+        grid-auto-rows: 35rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .producto__tarjeta{
+        margin: 20px;
     }
