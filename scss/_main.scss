@@ -9,8 +9,8 @@ main{
             background-image: url(../recursos/BODR-Hero-Image-1.jpg);
             background-size: cover;
             background-position: center;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
         }
         &__titulo{
             text-align: center;
@@ -21,7 +21,6 @@ main{
 
         &__titulo--2{
             text-align: center;
-            text-decoration: underline;
             color: $font-color;
             font-family: $font-titulos;
             @extend .padding-texto;
@@ -75,7 +74,7 @@ main{
             margin: 16px;
             display: flex;
             width: 80px;
-            height: 20px;
+            height: 25px;
         }
         
         &__botones{
@@ -104,10 +103,10 @@ button {
 
 .main__boton--1{
     grid-column:  3/3;
-    grid-row: 2/2;
+    grid-row: 4/4;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
     }
 
     .main__boton--1 button{
@@ -143,11 +142,7 @@ button {
         display: grid;
         gap: 1rem;
         grid-auto-rows: 25rem;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    }
-
-    .video__1{
-        margin: $margin;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
 
     .redes{
