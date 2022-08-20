@@ -92,23 +92,6 @@ main{
     }
 }
 
-button {
-    color: $font-color; 
-    background-color: $color-secundario;
-    border: $color-secundario solid 10px;
-    border-radius: 15px;
-    font-family: $font-principal;
-    border:none;
-}
-
-.main__boton--1{
-    grid-column:  3/3;
-    grid-row: 4/4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    }
-
     .main__boton--1 button{
         width: 200px;
         height: 60px;
@@ -120,6 +103,14 @@ button {
     .main__producto{
         border: white solid 2px;
         border-radius: 10px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__spotify{
         padding: 16px;
         display: flex;
         flex-direction: column;
@@ -154,4 +145,14 @@ button {
 
     .redes__sociales{
         margin: $margin;
+    }
+
+    .main__boton{
+        background-color: $color-secundario;
+        border: $color-secundario solid 10px;
+        border-radius: 15px;
+        color: $font-color;
+        height: 60px;
+        width: 150px;
+        margin: 15px;
     }

@@ -78,21 +78,6 @@ main {
       transform: scale(1.1, 1.1);
       transition: all 0.3s; }
 
-button {
-  color: white;
-  background-color: #1410e0;
-  border: #1410e0 solid 10px;
-  border-radius: 15px;
-  font-family: "M PLUS Rounded 1c", 300;
-  border: none; }
-
-.main__boton--1 {
-  grid-column: 3/3;
-  grid-row: 4/4;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center; }
-
 .main__boton--1 button {
   width: 200px;
   height: 60px; }
@@ -100,6 +85,13 @@ button {
 .main__producto {
   border: white solid 2px;
   border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.main__spotify {
   padding: 16px;
   display: flex;
   flex-direction: column;
@@ -129,6 +121,15 @@ button {
 
 .redes__sociales {
   margin: 20px; }
+
+.main__boton {
+  background-color: #1410e0;
+  border: #1410e0 solid 10px;
+  border-radius: 15px;
+  color: white;
+  height: 60px;
+  width: 150px;
+  margin: 15px; }
 
 /* FOOTER */
 footer {
@@ -270,3 +271,6 @@ body {
 .carrusel__altura {
   height: 500px;
   display: flex; }
+
+.margen__seccion {
+  margin: 20px; }
