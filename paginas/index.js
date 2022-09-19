@@ -1,35 +1,70 @@
 
 const productos = [
-    { name: "remera", price: 2500 },
-    { name: "pantalon", price: 7500 },
-    { name: "vela", price: 1500 },
-    { name: "disco", price: 1000 },
-    { name: "libro", price: 1500 },
+    { nombre: "remera", precio: 2500 },
+    { nombre: "pantalon", precio: 7500 },
+    { nombre: "vela", precio: 750 },
+    { nombre: "disco", precio: 1000 },
+    { nombre: "libro", precio: 1500 },
 ];
 
-console.log(
-    items.sort((a, b) => {
-        if (a.name < b.name) {
-            return -1;
+let carrito = [];
+
+let seleccion = prompt ("hola desea comprar algun producto si o no");
+
+while(seleccion != "si" && seleccion != "no"){
+    alert("por favor ingrese si o no")
+    seleccion = prompt("hola desea comprar algo si o no")
+}
+
+if(seleccion == "si"){
+    alert("acontinuacion nuesta lista de productos")
+    let todosLosProductos = productos.map((producto) => producto.nombre + " " + producto.precio + "$");
+    alert(todosLosProductos.join(" / "))
+}
+
+else if (seleccion == "no"){
+    alert("gracias por venis, hasta pronto!")
+};
+
+while(seleccion != "no"){
+    let producto = prompt("compra lo que mas te gusta!")
+    let precio = 0
+
+    if(producto == "remera" || producto == "pantalon" || producto == "vela" || producto == "disco" || producto == "libro"){
+        switch(producto){
+            case "remera":
+                precio = 2500;
+                break
+            ;
+            case "pantalon":
+                precio = 7500;
+                break;
+
+            case "vela":
+                precio = 750;
+                break;
+            
+            case "disco":
+                precio = 1000;
+                break;
+            
+            case "libro":
+                precio =1500;
+                break
         }
-        if (a.name > b.name) {
-            return 1;
-        }
+        let unidades = parseInt(prompt("cuantas unidades quieres?"))
 
-        return 0;
-    })
-);
+        carrito.push({producto, unidades, precio})
+    }
+    seleccion = prompt("desea seguir comprando?")
+    while(seleccion === "no"){
+        alert("gracias por su compra!, hasta pronto!")
+        carrito.forEach((carritoFinal) => {
+            console.log(`su carrito tiene, producto: ${carritoFinal.producto}, unidades: ${carritoFinal.unidades}, total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
+        })
+    break;
+    }
+}
 
-let encontrado = productos.find(productos => productos.nombre === "Javascript");
-console.log(encontrado); 
-
-let precio = parseInt(prompt("ingrese el producto a buscar"));
-let filtrados = productos.filter((productos) => cursos.precio > precio);
-filtrados.forEach((productos) => {
-    let mensaje = `
-    nombre: ${curso.nombre}
-    $${curso.precio}
-    `;
-
-    alert(mensaje);
-});
+const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
+console.log(`el total a pagar por su compra es: ${total}`);
