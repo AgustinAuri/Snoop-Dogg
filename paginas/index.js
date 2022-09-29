@@ -1,70 +1,68 @@
-
-const productos = [
-    { nombre: "remera", precio: 2500 },
-    { nombre: "pantalon", precio: 7500 },
-    { nombre: "vela", precio: 750 },
-    { nombre: "disco", precio: 1000 },
-    { nombre: "libro", precio: 1500 },
-];
+const shopContet = document.getElementById("shopContent");
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
 
 let carrito = [];
 
-let seleccion = prompt ("hola desea comprar algun producto si o no");
+productos.forEach((product) => {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p class="price">${product.precio} </p>
+    `;
 
-while(seleccion != "si" && seleccion != "no"){
-    alert("por favor ingrese si o no")
-    seleccion = prompt("hola desea comprar algo si o no")
-}
+    shopContet.append(content);
 
-if(seleccion == "si"){
-    alert("acontinuacion nuesta lista de productos")
-    let todosLosProductos = productos.map((producto) => producto.nombre + " " + producto.precio + "$");
-    alert(todosLosProductos.join(" / "))
-}
+    let comprar = document.createElement("button")
+    comprar.innerText = "comprar";
+    comprar.className = "comprar";
 
-else if (seleccion == "no"){
-    alert("gracias por venis, hasta pronto!")
-};
+    content.append(comprar);
 
-while(seleccion != "no"){
-    let producto = prompt("compra lo que mas te gusta!")
-    let precio = 0
+    comprar.addEventListener("click", () => {
+        carrito.push({
+            id : product.id,
+            img : product.nombre,
+            nombre : product.nombre,
+            precio : product.precio,
+        });
+        console.log(carrito);
+    });
+});
 
-    if(producto == "remera" || producto == "pantalon" || producto == "vela" || producto == "disco" || producto == "libro"){
-        switch(producto){
-            case "remera":
-                precio = 2500;
-                break
-            ;
-            case "pantalon":
-                precio = 7500;
-                break;
+verCarrito,addEventListener("click", () => {
 
-            case "vela":
-                precio = 750;
-                break;
-            
-            case "disco":
-                precio = 1000;
-                break;
-            
-            case "libro":
-                precio =1500;
-                break
-        }
-        let unidades = parseInt(prompt("cuantas unidades quieres?"))
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header";
+    modalHeader.innerHTML = `
+        <h1 class="modal-header-title">Carrito.</h1>
+    `;
+    modalContainer.append(modalHeader);
 
-        carrito.push({producto, unidades, precio})
-    }
-    seleccion = prompt("desea seguir comprando?")
-    while(seleccion === "no"){
-        alert("gracias por su compra!, hasta pronto!")
-        carrito.forEach((carritoFinal) => {
-            console.log(`su carrito tiene, producto: ${carritoFinal.producto}, unidades: ${carritoFinal.unidades}, total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
-        })
-    break;
-    }
-}
+    const modalbutton = document.createElement("h1");
+    modalbutton.innerText = "x";
+    modalbutton.className = "modal-header-button";
 
-const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
-console.log(`el total a pagar por su compra es: ${total}`);
+    modalHeader.append(modalbutton);
+
+    carrito.forEach((product) => {
+        let carritoContent = document.createElement("div");
+        carritoContent.className = "modal-content"
+        carritoContent.innerHTML = `
+        <img src="${product.img}">
+        <h3>${product.nombre}</h3>
+        <p>${product.precio}</p>
+        `;
+
+        modalContainer,append(carritoContent)
+    });
+
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+
+    const totalbuying = document.createElement("div");
+    totalbuying.className = "total-content"
+    totalbuying.innerHTML = `total a pagar: ${total} $`;
+    modalContainer.append(totalbuying) 
+}); 
