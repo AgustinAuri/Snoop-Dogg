@@ -6,7 +6,7 @@ let carrito = [];
 
 productos.forEach((product) => {
     let content = document.createElement("div");
-    content.className = "card";
+    content.className = "tarjeta";
     content.innerHTML = `
         <img src="${product.img}">
         <h3>${product.nombre}</h3>
